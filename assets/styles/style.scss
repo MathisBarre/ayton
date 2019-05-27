@@ -191,10 +191,6 @@ footer {
    background: $black;
    text-align: center;
 }
-
-.POP-UP-contact-child2 {
-}
-
 .POP-UP-contact-child3 {
    flex: 1;
    display: flex;
@@ -218,38 +214,6 @@ footer {
    max-width: 500px;
 }
 
-/*footer {
-   background: #4e4e50;
-}
-/*
-@media (max-width: 1023px) {
-   main {
-      flex-direction: column;
-
-      > section {
-         width: 100vw;
-         height: 33.3vh;
-         max-height: 33.3vh;
-         min-height: 33.3vh;
-      }
-   }
-   .s-contact {
-      background-position: top center!important;
-   }
-}
-
-@media (max-width:425px) {
-   main > section {
-      width: 100vw;
-      height: 100vh;
-      max-height: 100vh;
-      min-height: 100vh;
-      background-attachment: fixed!important;
-   }
-   .s-contact {
-      background-position: center center!important;
-   }
-}
 
 .noscript {
    position: fixed;
@@ -259,4 +223,5 @@ footer {
    margin: 0px;
    color: red;
    background: yellow;
-}*/
+   padding: 0 5px;
+}
