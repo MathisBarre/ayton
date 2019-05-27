@@ -1,0 +1,262 @@
+---
+---
+
+$black: #2a2a2e;
+
+* {
+   box-sizing: border-box;
+}
+
+body {
+   background: $black;
+   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   color: whitesmoke;
+   margin: 0;
+}
+
+main {
+   display: grid;
+   grid-template-columns: repeat(3 , 1fr);
+   > section {
+      min-height: 100vh;
+      padding: 2%;
+      transition-duration: .5s;
+   }
+}
+
+.brand {
+   position: fixed;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%,-50%);
+   max-width: 30%;
+   width: 30%;
+   height: auto;
+
+}
+
+.s-collection, .s-contact, .s-shop1, .s-shop2 {
+   color: whitesmoke;
+   text-shadow: 0px 0px 10px rgb(24, 20, 19);
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   text-align: center;
+
+
+}
+
+.s-collection, .s-contact {
+   &::before {
+      content: "";
+      position: absolute;
+      top: 0px;
+      right: 0%;
+      left: 0%;
+      bottom: 0%;
+      background: black;
+      opacity: .1;
+   }
+   h1,p,a {
+      z-index: 1;
+   }
+}
+
+.s-collection {
+   background: url("/assets/img/DSC3029.jpg") center center;
+   background-size: cover;
+   &::before {
+      opacity: 0.35;
+   }
+}
+
+.s-contact {
+   background: url("/assets/img/DSC2956.jpg") center center;
+   background-size: cover;
+}
+
+.s-brand {
+   grid-row: 1 / 3;
+   grid-column-start: 2;
+}
+
+.s-shop1 {
+   background: white;
+}
+
+.s-shop2 {
+   background: white;
+}
+
+.mail-btn {
+   color: black;
+   font-weight: bold;
+   background: whitesmoke;
+   border: solid 1px $black;
+   padding: 5px;
+   border-radius: 5px;
+   margin-top: 10px;
+   text-shadow: none;
+}
+
+.t-shirt_container {
+   min-height: 300px;
+   min-width: 200px;
+   background: #2a2a2ece;
+   border-radius: 10px;
+   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+   position: relative;
+   &:hover {
+      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
+   /*display: flex;
+   flex-direction: column;
+   justify-content: space-around;*/
+}
+
+.img-shirt-1, .img-shirt-2 {
+   height: 200px;
+   width: 100%;
+   background: white;
+   border-radius: 10px 10px 0 0;
+}
+
+.img-shirt-1 {
+   background: url("/assets/img/DSC3029.jpg") center center;
+   background-size: cover;
+}
+
+.img-shirt-2 {
+   background: url("/assets/img/DSC2956.jpg") center center;
+   background-size: cover;
+}
+
+.old_price {
+   text-decoration: line-through;
+   opacity: .5;
+   font-size: 0.8em;
+}
+
+.commande {
+   position: absolute;
+   top: 0px; bottom: 0; left: 0; right: 0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background: #2a2a2eb4;
+   margin: 0;
+   border-radius: 10px;
+   opacity: 0;
+   transition-duration: .2s;
+   cursor: pointer;
+   color: whitesmoke!important;
+   font-weight: bold;
+   font-size: 1.2em;
+}
+
+.t-shirt_container:hover .commande {
+   opacity: 1;
+}
+
+footer {
+   padding: 25px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   grid-column: span 3;
+}
+
+.legal {
+   color: white;
+}
+
+.contact_wrapper {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+}
+
+.POP-UP-contact-child1 {
+   flex: 1;
+   margin: 5px 15px;
+   padding: 5px;
+   border-radius: 10px;
+   height: 100%;
+   width: 100%;
+   color: white;
+   text-decoration: none;
+   background: $black;
+   text-align: center;
+}
+
+.POP-UP-contact-child2 {
+}
+
+.POP-UP-contact-child3 {
+   flex: 1;
+   display: flex;
+   flex-direction: column;
+   padding: 5px 15px;
+
+
+   input, textarea {
+      display: block;
+      width: 100%;
+      margin-bottom: 5px;
+      resize: vertical;
+   }
+}
+
+.button-close {
+   width: 100%;
+}
+
+.site-description {
+   max-width: 500px;
+}
+
+/*footer {
+   background: #4e4e50;
+}
+/*
+@media (max-width: 1023px) {
+   main {
+      flex-direction: column;
+
+      > section {
+         width: 100vw;
+         height: 33.3vh;
+         max-height: 33.3vh;
+         min-height: 33.3vh;
+      }
+   }
+   .s-contact {
+      background-position: top center!important;
+   }
+}
+
+@media (max-width:425px) {
+   main > section {
+      width: 100vw;
+      height: 100vh;
+      max-height: 100vh;
+      min-height: 100vh;
+      background-attachment: fixed!important;
+   }
+   .s-contact {
+      background-position: center center!important;
+   }
+}
+
+.noscript {
+   position: fixed;
+   top: 5px;
+   left: 5px;
+   z-index: 100;
+   margin: 0px;
+   color: red;
+   background: yellow;
+}*/

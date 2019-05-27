@@ -1,0 +1,100 @@
+---
+mention_legal: >- 
+  Site sous licence...
+texte-decouverte: >-
+   Ayton sport est une marque lorem, ipsum dolor sit amet consectetur adipisicing.
+---
+
+<!DOCTYPE html>
+<html lang="fr">
+{% include head.html %}
+<body>
+   <noscript><p class="noscript">Javascript disabled : you may encounter problems</p></noscript>
+   <main>
+      <!--presentation-->
+      <section class="s-collection">
+         <h1>Découvrez la première collection ayton !</h1>
+         <p>{{ page.texte-decouverte }}</p>
+      </section>
+      <!--presentation-->
+
+      <!--brand-->
+      <section class="s-brand">
+         <img src="assets/img/logo_ayton_texte_blanc.png" alt="Logo ayton" class="brand">
+      </section>
+      <!--brand-->
+
+      <!--contact-->
+      <section class="s-contact">
+         <h1>Contactez-nous !</h1>
+         <p>Pour tous achats, toute questions, toutes demandes, contactez ayton sport directement par mail.</p>
+         <a class="mail-btn js-modal-open" href="commandePop-up" >Contactez-nous !</a>
+      </section>
+      <!--contact-->
+            
+      <!--shop-left-->
+      <section class="s-shop1">
+         <div class="t-shirt_container">
+            <div class="img-shirt-1"></div>
+            <h4>T-shirt Unisex</h4>
+            <h4>40€ <span class="old_price">69€</span> </h4>
+            <a href="commandePop-up" class="commande js-modal-open">Commander !</a>            
+         </div>
+      </section>
+      <!--shop-left-->
+      
+      <!--shop-left-->
+      <section class="s-shop2">
+         <div class="t-shirt_container">
+            <div class="img-shirt-2"></div>
+            <h4>Sweat Unisex</h4>
+            <h4>40€ <span class="old_price">69€</span> </h4>
+            <a href="commandePop-up" class="commande js-modal-open">Commander !</a>
+         </div>
+      </section>
+      <!--shop-left-->
+
+      <!--footer-->
+      <footer>
+         <p class="site-description">
+            {{ site.description }}
+         </p>
+         <a href="mention_legal" class="legal js-modal-open">
+            Mentions légales
+         </a>
+         <aside id="mention_legal" class="modale" style="display:none">
+            <div class="modale-wrapper js-modal-stop">
+                <h1 id="mentions légales">Mentions légales</h1>
+                <p>{{ page.mention_legal }}</p>
+                <button class="js-modal-close">Fermer la boite modale</button>
+            </div>
+        </aside>
+      </footer>
+      <!--footer-->
+      
+   </main>
+
+   <!-- pop-up -->
+   <aside id="commandePop-up" class="modale" style="display:none">
+      <div class="modale-wrapper js-modal-stop">
+          <div class="contact_wrapper">
+            <a class="POP-UP-contact-child1" href="mailto:{{ site.email }}">Contact direct <br> {{ site.email }} </a>
+            <div class="POP-UP-contact-child2">Ou</div>
+            <div  class="POP-UP-contact-child3">
+               <form action="https://formspree.io/{{ site.email }}" method="POST">
+                  <input type="text" name="name" placeholder="Nom / Prénom">
+                  <input type="email" name="_replyto" placeholder="Adresse mail">
+                  <textarea name="message" id="message" rows="5" placeholder="Votre message"></textarea>
+                  <input type="submit" value="Send">
+                </form> 
+            </div>
+          </div>
+          <button class="js-modal-close button-close">Fermer la boite modale</button>
+      </div>
+  </aside>
+  <!-- pop-up -->
+
+   <script src="assets/scripts/script.js"></script>
+   <script src="assets/scripts/modal_window.js"></script>
+</body>
+</html>
