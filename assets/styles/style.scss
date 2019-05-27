@@ -112,9 +112,6 @@ main {
    &:hover {
       box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
     }
-   /*display: flex;
-   flex-direction: column;
-   justify-content: space-around;*/
 }
 
 .img-shirt-1, .img-shirt-2 {
@@ -224,4 +221,41 @@ footer {
    color: red;
    background: yellow;
    padding: 0 5px;
+}
+
+@media screen and (max-width: 900px) {
+   main {
+      grid-template-columns: 1fr 1fr!important;
+   }
+   section {
+      min-height: 300px!important;
+      grid-column: span 2;
+      width: 100%!important;
+   }
+   .s-brand {
+      grid-row: none!important;
+      grid-column-start: 1;
+      grid-column-end: 3;
+
+      .brand {
+         width: 100%;
+         max-width: none;
+         position: relative;
+      }
+   }
+   .s-shop1{
+      grid-column: 1 / 2;
+   }
+
+   .t-shirt_container {
+      width: 100%;
+      min-height: 100%;
+   }
+}
+
+@media screen and (max-width: 400px) {
+   .s-shop1, .s-shop2 {
+      grid-column-start: 1;
+      grid-column-end: 3;
+   }
 }
