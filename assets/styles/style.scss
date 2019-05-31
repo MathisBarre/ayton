@@ -296,6 +296,9 @@ input[type=text], textarea, input[type=email] {
       width: 100%;
       min-height: 100%;
    }
+   .s-collection {
+      display: none;
+   }
 }
 
 @media screen and (max-width: 400px) {
