@@ -1,6 +1,7 @@
 ---
 mention_legal: Site sous licence...
-texte-decouverte: Ayton sport est une marque lorem, ipsum dolor sit amet consectetur
+# Juste un test
+texte_decouverte: Ayton sport est une marque lorem, ipsum dolor sit amet consectetur
   adipisicing.
 
 ---
@@ -13,7 +14,7 @@ texte-decouverte: Ayton sport est une marque lorem, ipsum dolor sit amet consect
       <!--presentation-->
       <section class="s-collection">
          <h1>Découvrez la première collection ayton !</h1>
-         <p>{{ page.texte-decouverte }}</p>
+         <p>{{ page.texte_decouverte }}</p>
       </section>
       <!--presentation-->
 
@@ -77,9 +78,9 @@ texte-decouverte: Ayton sport est une marque lorem, ipsum dolor sit amet consect
    <aside id="commandePop-up" class="modale" style="display:none">
       <div class="modale-wrapper js-modal-stop">
           <div class="contact_wrapper">
-            <a class="POP-UP-contact-child1" href="mailto:{{ site.email }}">Contact direct <br> {{ site.email }} </a>
-            <div class="POP-UP-contact-child2">Ou</div>
-            <div  class="POP-UP-contact-child3">
+            <a class="pop-up-contact-child1" href="mailto:{{ site.email }}">Contact direct <br> {{ site.email }} </a>
+            <div class="pop-up-contact-child2">Ou</div>
+            <div  class="pop-up-contact-child3">
                <form action="https://formspree.io/{{ site.email }}" method="POST">
                   <input type="text" name="name" placeholder="Nom / Prénom">
                   <input type="email" name="_replyto" placeholder="Adresse mail">
