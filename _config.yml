@@ -7,6 +7,7 @@ url: "https://ayton.netlify.com/" # the base hostname & protocol for your site, 
 author: ""
 logo: "assets/img/logo_A_ayton_texte_blanc.png"
 lang: fr_FR
+google_site_verification: WhMYyrxLB-VmkACNJWFaI-aTi68H9v17BAIebEujFu8
 # Build settings
 markdown: kramdown
 
