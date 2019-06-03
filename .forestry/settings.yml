@@ -5,8 +5,14 @@ admin_path:
 webhook_url: 
 sections:
 - type: document
+  path: index.html
+  label: Index / Accueil
+  match: "**/*"
+- type: heading
+  label: Danger zone
+- type: document
   path: _config.yml
-  label: 'Attention : configuration du site'
+  label: Configuration du site
 - type: jekyll-pages
   label: Pages
   create: all
