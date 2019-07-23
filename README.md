@@ -11,4 +11,4 @@ Marque par : Pierre Chalain
 ### V2.0 :
 
 - [ ] Redesign
-- [ ] Configuration de l'ajout ilimité de vêtements
+- [ ] Configuration de l'ajout illimité de vêtements
